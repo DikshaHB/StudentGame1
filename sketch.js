@@ -293,26 +293,26 @@ function draw() {
       crab2.velocityX = -2;
      }
      
-     if(keyDown(72)){
-       tortoise.velocityY = -3;
+      if(keyDown('up')){
+       tortoise.y =tortoise.y -5;
      }
-     else if(keyDown(77)){
-      tortoise.velocityX = 3;
+     else if(keyDown("right")){
+      tortoise.x = tortoise.x+5;
      }
-     else if(keyDown(80)){
-       tortoise.velocityY = 3;
+     else if(keyDown('down')){
+      tortoise.y = tortoise.y+5;
      }
-     else if(keyDown(75)){
-      tortoise.velocityX = -3;
+     else if(keyDown('left')){
+      tortoise.x= tortoise.x-5;
      }
      console.log(tortoise.velocity)
      sharksGroup1.visible = true;
 
-    //if(gameState === 4 && sharksGroup1.isTouching(tortoise)){
-      //gameState = 5;
+    if(gameState === 4 && sharksGroup1.isTouching(tortoise)){
+      gameState = 5;
    
     
-  //}
+  }
 }
  spawnSharks();
   drawSprites();
